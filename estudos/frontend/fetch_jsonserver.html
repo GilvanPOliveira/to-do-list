@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Fetch JSON Server</title>
+</head>
+<body>
+  <h2>Lista de Usuários (JSON Server)</h2>
+  <ul id="lista"></ul>
+
+  <script>
+    fetch('http://localhost:3000/usuarios')
+      .then(res => res.json())
+      .then(data => {
+        const lista = document.getElementById('lista');
+        data.forEach(usuario => {
+          const li = document.createElement('li');
+          li.textContent = usuario.nome + " - " + usuario.email;
+          lista.appendChild(li);
+        });
+      });
+  </script>
+</body>
+</html>

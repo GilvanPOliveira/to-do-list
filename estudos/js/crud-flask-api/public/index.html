@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <title>CRUD com Flask + JS</title>
+  <style>
+    body { font-family: Arial; padding: 20px; }
+    input, button { margin: 5px; }
+    .tarefa { border-bottom: 1px solid #ccc; padding: 10px; }
+  </style>
+</head>
+<body>
+  <h2>Gerenciador de Tarefas (API Flask)</h2>
+
+  <input type="text" id="titulo" placeholder="Título">
+  <input type="text" id="descricao" placeholder="Descrição">
+  <button onclick="criarTarefa()">Adicionar</button>
+
+  <div id="tarefas-container"></div>
+
+  <script src="script.js"></script>
+</body>
+</html>
